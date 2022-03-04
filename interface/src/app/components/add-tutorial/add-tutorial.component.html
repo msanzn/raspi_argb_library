@@ -1,0 +1,79 @@
+<div style="width: 400px; margin: auto;">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Object</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="tutorial.object"
+          name="title"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="tutorial.description"
+          name="description"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="row">Row</label>
+        <input
+          class="form-control"
+          id="row"
+          required
+          [(ngModel)]="tutorial.row"
+          name="row"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="columm">Columm</label>
+        <input
+          type="text"
+          class="form-control"
+          id="columm"
+          [(ngModel)]="tutorial.columm"
+          name="columm"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="condition">Condition</label>
+        <input
+          class="form-control"
+          id="condition"
+          required
+          [(ngModel)]="tutorial.condition"
+          name="condition"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="state">State</label>
+        <input
+          class="form-control"
+          id="state"
+          required
+          [(ngModel)]="tutorial.state"
+          name="state"
+        />
+      </div>
+      <br>
+      <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Envio correcto</h4>
+      <button class="btn btn-success" (click)="newTutorial()">Añadir</button>
+    </div>
+  </div>
+</div>
